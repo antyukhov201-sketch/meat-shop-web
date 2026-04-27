@@ -4,10 +4,6 @@
 
 @theme inline {
   --color-dark-bg: #121212;
-  /* ... весь твой остальной код темы и стилей ниже ... */
-
-@theme inline {
-  --color-dark-bg: #121212;
   --color-dark-elevated: #1a1a1a;
   --color-dark-card: #242424;
   --color-gold: #c9a227;
