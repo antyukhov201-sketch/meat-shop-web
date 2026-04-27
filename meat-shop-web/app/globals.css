@@ -1,4 +1,10 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme inline {
+  --color-dark-bg: #121212;
+  /* ... весь твой остальной код темы и стилей ниже ... */
 
 @theme inline {
   --color-dark-bg: #121212;
