@@ -12,7 +12,6 @@
   --color-white: #ffffff;
 }
 
-@layer base {
   nav a, 
   nav button, 
   header a {
