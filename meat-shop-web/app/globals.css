@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-dark-bg: #121212;
+  --color-dark-elevated: #1a1a1a;
+  --color-dark-card: #242424;
+  --color-gold: #c9a227;
+  --color-gold-light: #d4b84a;
+  --color-gold-dark: #9a7b1c;
+  --color-cream: #f5f5f5;
+  --color-cream-muted: #b0b0b0;
+  --color-white: #ffffff;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--color-dark-bg);
+  min-height: 100vh;
+  color: var(--color-cream);
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+}
+
+@layer utilities {
+  .text-shadow-gold {
+    text-shadow: 0 0 20px rgba(201, 162, 39, 0.3);
+  }
+  
+  .main-bg-layout {
+    background-image: 
+      linear-gradient(to right, 
+        rgba(0,0,0,0) 0%, 
+        rgba(0,0,0,0.4) 15%, 
+        rgba(0,0,0,0.95) 35%, 
+        rgba(18,18,18,1) 50%, 
+        rgba(0,0,0,0.95) 65%, 
+        rgba(0,0,0,0.4) 85%, 
+        rgba(0,0,0,0) 100%
+      ),
+      url(/Gemini_Generated_Image_df8y1mdf8y1mdf8y.png);
+    background-size: cover;
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: brightness(0.4) grayscale(0.3);
+  }
+  
+  .bg-atmospheric {
+    background-image: 
+      linear-gradient(to right, 
+        rgba(0,0,0,0) 0%, 
+        rgba(0,0,0,0.4) 15%, 
+        rgba(0,0,0,0.95) 35%, 
+        rgba(18,18,18,1) 50%, 
+        rgba(0,0,0,0.95) 65%, 
+        rgba(0,0,0,0.4) 85%, 
+        rgba(0,0,0,0) 100%
+      ),
+      url(/Gemini_Generated_Image_df8y1mdf8y1mdf8y.png);
+    background-size: cover;
+    background-position: center left;
+    background-repeat: no-repeat;
+    will-change: transform;
+  }
+  
+  .glass-card {
+    background: rgba(26, 26, 26, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  }
+  
+  .glass-card-deep {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.7) 0%, rgba(18, 18, 18, 0.8) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 
+      0 4px 24px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  }
+  
+  .card-premium {
+    background: linear-gradient(135deg, rgba(36, 36, 36, 0.8) 0%, rgba(26, 26, 26, 0.9) 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: all 0.3s ease;
+  }
+  
+  .card-premium:hover {
+    border-color: rgba(201, 162, 39, 0.5);
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05),
+      0 0 20px rgba(201, 162, 39, 0.1);
+  }
+}
